@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Browse Sher's Home Food products including pickles, sweets, snacks, podi, masalas, ghee, millets, and dry fruits." />
+    <title>Products | Sher's Home Food</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="page-loader" id="pageLoader">
+      <div class="spinner"></div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=120&q=80" alt="Sher's Home Food logo" class="brand-logo" loading="lazy" />
+          <span class="fw-bold text-dark">Sher's Home Food</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+          <div class="d-flex align-items-center gap-3">
+            <a href="cart.html" class="text-dark position-relative">
+              <i class="bi bi-bag fs-5"></i>
+              <span class="cart-badge" id="cartCount">0</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="page-hero">
+        <div class="container text-center text-white">
+          <h1 class="display-5 fw-bold">Our Signature Products</h1>
+          <p class="lead">Handcrafted pantry essentials for everyday indulgence.</p>
+        </div>
+      </section>
+
+      <section class="py-5">
+        <div class="container">
+          <div class="row g-4">
+            <aside class="col-lg-3">
+              <div class="card border-0 shadow-sm p-4 sticky-top aside-card">
+                <div class="mb-4">
+                  <label for="productSearch" class="form-label fw-semibold">Search Products</label>
+                  <input id="productSearch" type="text" class="form-control" placeholder="Search by name" />
+                </div>
+                <div class="mb-4">
+                  <h6 class="fw-semibold">Categories</h6>
+                  <div class="form-check"><input class="form-check-input" type="checkbox" checked /> <label class="form-check-label">Pickles</label></div>
+                  <div class="form-check"><input class="form-check-input" type="checkbox" checked /> <label class="form-check-label">Sweets</label></div>
+                  <div class="form-check"><input class="form-check-input" type="checkbox" checked /> <label class="form-check-label">Snacks</label></div>
+                  <div class="form-check"><input class="form-check-input" type="checkbox" checked /> <label class="form-check-label">Podi</label></div>
+                  <div class="form-check"><input class="form-check-input" type="checkbox" checked /> <label class="form-check-label">Masalas</label></div>
+                </div>
+                <div class="mb-4">
+                  <h6 class="fw-semibold">Price</h6>
+                  <div class="form-check"><input class="form-check-input" type="radio" name="price" checked /> <label class="form-check-label">All</label></div>
+                  <div class="form-check"><input class="form-check-input" type="radio" name="price" /> <label class="form-check-label">Under ₹300</label></div>
+                  <div class="form-check"><input class="form-check-input" type="radio" name="price" /> <label class="form-check-label">₹300 - ₹600</label></div>
+                </div>
+                <div>
+                  <h6 class="fw-semibold">Ratings</h6>
+                  <div class="form-check"><input class="form-check-input" type="radio" name="rating" checked /> <label class="form-check-label">All</label></div>
+                  <div class="form-check"><input class="form-check-input" type="radio" name="rating" /> <label class="form-check-label">4+ Stars</label></div>
+                  <div class="form-check"><input class="form-check-input" type="radio" name="rating" /> <label class="form-check-label">5 Stars</label></div>
+                </div>
+              </div>
+            </aside>
+
+            <div class="col-lg-9">
+              <div class="row g-4" id="productGrid">
+                <div class="col-md-6 col-xl-4 product-item" data-name="Mango Pickle" data-category="Pickles" data-price="280" data-rating="4.8">
+                  <div class="card product-card h-100 border-0 shadow-sm">
+                    <img src="/images/products/mango pickle.png" class="card-img-top" alt="Mango Pickle" loading="lazy" />
+                    <div class="card-body">
+                      <h5 class="card-title">Mango Pickle</h5>
+                      <p class="text-muted small">Tangy and spicy with freshly ground spices.</p>
+                      <div class="text-warning small mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+                      <div class="d-flex justify-content-between align-items-center mt-3">
+                        <div><span class="fw-bold text-primary">₹280</span></div>
+                        <div class="d-flex gap-2">
+                          <button class="btn btn-outline-primary btn-sm quick-view" data-name="Mango Pickle" data-price="₹280" data-description="Tangy mango pickle made with handpicked spices and sun-ripened mangoes.">Quick View</button>
+                          <button class="btn btn-primary btn-sm add-to-cart" data-name="Mango Pickle" data-price="280" data-image="/images/products/mango pickle.png">Add</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-xl-4 product-item" data-name="Boondi Laddu" data-category="Sweets" data-price="360" data-rating="4.9">
+                  <div class="card product-card h-100 border-0 shadow-sm">
+                    <img src="/images/products/boondi laddu.png" class="card-img-top" alt="Boondi Laddu" loading="lazy" />
+                    <div class="card-body">
+                      <h5 class="card-title">Boondi Laddu</h5>
+                      <p class="text-muted small">Soft laddus with ghee, nuts, and cardamom.</p>
+                      <div class="text-warning small mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                      <div class="d-flex justify-content-between align-items-center mt-3">
+                        <div><span class="fw-bold text-primary">₹360</span></div>
+                        <div class="d-flex gap-2">
+                          <button class="btn btn-outline-primary btn-sm quick-view" data-name="Boondi Laddu" data-price="₹360" data-description="Classic festive sweet with aromatic ghee and crunchy boondis.">Quick View</button>
+                          <button class="btn btn-primary btn-sm add-to-cart" data-name="Boondi Laddu" data-price="360" data-image="/images/products/boondi laddu.png">Add</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-xl-4 product-item" data-name="Murukulu" data-category="Snacks" data-price="220" data-rating="4.6">
+                  <div class="card product-card h-100 border-0 shadow-sm">
+                    <img src="/images/products/murukulu.png" class="card-img-top" alt="Murukulu" loading="lazy" />
+                    <div class="card-body">
+                      <h5 class="card-title">Murukulu</h5>
+                      <p class="text-muted small">Crunchy snack made with a special spice blend.</p>
+                      <div class="text-warning small mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></div>
+                      <div class="d-flex justify-content-between align-items-center mt-3">
+                        <div><span class="fw-bold text-primary">₹220</span></div>
+                        <div class="d-flex gap-2">
+                          <button class="btn btn-outline-primary btn-sm quick-view" data-name="Murukulu" data-price="₹220" data-description="Delicious crunchy snack with roasted gram flour and spices.">Quick View</button>
+                          <button class="btn btn-primary btn-sm add-to-cart" data-name="Murukulu" data-price="220" data-image="/images/products/murukulu.png">Add</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-xl-4 product-item" data-name="Karam Podi" data-category="Podi" data-price="180" data-rating="4.7">
+                  <div class="card product-card h-100 border-0 shadow-sm">
+                    <img src="/images/products/karam podi.png" class="card-img-top" alt="Karam Podi" loading="lazy" />
+                    <div class="card-body">
+                      <h5 class="card-title">Karam Podi</h5>
+                      <p class="text-muted small">A fiery spice powder for dosa and rice.</p>
+                      <div class="text-warning small mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+                      <div class="d-flex justify-content-between align-items-center mt-3">
+                        <div><span class="fw-bold text-primary">₹180</span></div>
+                        <div class="d-flex gap-2">
+                          <button class="btn btn-outline-primary btn-sm quick-view" data-name="Karam Podi" data-price="₹180" data-description="Fiery spice powder made from roasted lentils and chillies.">Quick View</button>
+                          <button class="btn btn-primary btn-sm add-to-cart" data-name="Karam Podi" data-price="180" data-image="/images/products/karam podi.png">Add</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-xl-4 product-item" data-name="Sambar Powder" data-category="Masalas" data-price="240" data-rating="4.8">
+                  <div class="card product-card h-100 border-0 shadow-sm">
+                    <img src="/images/products/sambar powder.png" class="card-img-top" alt="Sambar Powder" loading="lazy" />
+                    <div class="card-body">
+                      <h5 class="card-title">Sambar Powder</h5>
+                      <p class="text-muted small">Authentic masala for rich, aromatic sambar.</p>
+                      <div class="text-warning small mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                      <div class="d-flex justify-content-between align-items-center mt-3">
+                        <div><span class="fw-bold text-primary">₹240</span></div>
+                        <div class="d-flex gap-2">
+                          <button class="btn btn-outline-primary btn-sm quick-view" data-name="Sambar Powder" data-price="₹240" data-description="Aromatic spice blend crafted for rich and flavorful sambar.">Quick View</button>
+                          <button class="btn btn-primary btn-sm add-to-cart" data-name="Sambar Powder" data-price="240" data-image="/images/products/sambar powder.png">Add</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-xl-4 product-item" data-name="Cow Ghee" data-category="Ghee" data-price="650" data-rating="4.9">
+                  <div class="card product-card h-100 border-0 shadow-sm">
+                    <img src="/images/products/cow ghee.png" class="card-img-top" alt="Cow Ghee" loading="lazy" />
+                    <div class="card-body">
+                      <h5 class="card-title">Cow Ghee</h5>
+                      <p class="text-muted small">Pure, fragrant, and perfect for cooking and rituals.</p>
+                      <div class="text-warning small mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                      <div class="d-flex justify-content-between align-items-center mt-3">
+                        <div><span class="fw-bold text-primary">₹650</span></div>
+                        <div class="d-flex gap-2">
+                          <button class="btn btn-outline-primary btn-sm quick-view" data-name="Cow Ghee" data-price="₹650" data-description="Pure cow ghee with a rich aroma and traditional texture.">Quick View</button>
+                          <button class="btn btn-primary btn-sm add-to-cart" data-name="Cow Ghee" data-price="650" data-image="/images/products/cow ghee.png">Add</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <nav class="mt-5" aria-label="Page navigation">
+                <ul class="pagination justify-content-center">
+                  <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-dark text-white py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-3">
+            <h5 class="fw-bold mb-3">Sher's Home Food</h5>
+            <p class="text-white-50">Traditional recipes, crafted fresh for your home.</p>
+          </div>
+          <div class="col-lg-3">
+            <h6 class="fw-bold mb-3">Quick Links</h6>
+            <ul class="list-unstyled text-white-50">
+              <li><a href="index.html" class="text-white-50 text-decoration-none">Home</a></li>
+              <li><a href="about.html" class="text-white-50 text-decoration-none">About</a></li>
+              <li><a href="contact.html" class="text-white-50 text-decoration-none">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-top mt-4 pt-4 text-white-50">
+          <small>© <span id="year"></span> Sher's Home Food. All rights reserved.</small>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal fade" id="quickViewModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="quickViewTitle">Product</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body" id="quickViewBody"></div>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn btn-primary rounded-circle back-to-top" id="backToTop" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
